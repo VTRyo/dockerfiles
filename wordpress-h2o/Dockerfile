@@ -19,7 +19,7 @@ RUN yum -y install h2o
 RUN mkdir /etc/h2o/mruby
 ADD ./templates/h2o/mruby/htpasswd.rb /etc/h2o/mruby/htpasswd.rb
 
-#wordpress
+#wordpress section
 RUN mkdir -p /var/www/html
 WORKDIR /var/www/html
 RUN git clone --depth=1 https://github.com/WordPress/WordPress.git
