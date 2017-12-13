@@ -32,4 +32,40 @@ RUN rpm -Uvh \
 RUN yum -y install \
     libwebp
 
+RUN yum -y install \
+    httpd \
+    libmcrypt \
+    libtool-ltdl \
+    libtidy \
+    libXpm \
+    libtiff \
+    autoconf \
+    automake \
+    gd-last \
+    enchant-aspell
 
+RUN yum -y install --enablerepo=remi,remi-php70 \
+    php \
+    php-process \
+    php-mysqlnd \
+    php-pecl-mailparse \
+    php-json \
+    php-cli \
+    php-pdo \
+    php-fpm \
+    php-bcmath \
+    php-gd \
+    php-mcrypt \
+    php-pecl-apcu \
+    php-pecl-igbinary \
+    php-pear \
+    php-intl \
+    php-pecl-apcu-devel \
+    php-common \
+    php-mbstring \
+    php-xml \
+    php-devel \
+    php-pecl-apcu-bc \
+    php-pecl-redis \
+    php-opcache \
+    php-enchant
